@@ -32,8 +32,8 @@ public class AbsenceServiceImpl implements IAbsenceService, ICrudService<Absence
     }
 
     @Override
-    public void delete(Long aLong) {
-        absenceRepository.deleteById(aLong);
+    public void delete(Long id) {
+        absenceRepository.deleteById(id);
     }
 
     @Override
