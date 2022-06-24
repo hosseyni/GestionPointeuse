@@ -23,7 +23,7 @@ public class SwaggerConfiguration {
                 "This API is used to manage revenue.",
                 "1.0",
                 "Terms of service",
-                new Contact("JADOUI Bassem", "https://www.linkedin.com/in/bassem-jadoui-85b6b9199/", "bassem.jadoui@esprit.tn"),
+                new Contact("hosseyni taher", "https://www.linkedin.com/in/hosseyni-taher-586a34197/", "hsini86.taher@gmail.com "),
                 "License of API",
                 "API license URL",
                 Collections.emptyList());
