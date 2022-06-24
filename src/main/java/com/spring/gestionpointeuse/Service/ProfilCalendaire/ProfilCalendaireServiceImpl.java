@@ -4,13 +4,14 @@ import com.spring.gestionpointeuse.Entity.Details;
 import com.spring.gestionpointeuse.Entity.ProfilCalendaire;
 import com.spring.gestionpointeuse.Repository.ProfilCalendaireRepository;
 import com.spring.gestionpointeuse.Service.ICrudService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
 public class ProfilCalendaireServiceImpl implements IProfilCalendaireService, ICrudService<ProfilCalendaire,Long> {
-
+    @Autowired
     private ProfilCalendaireRepository profilCalendaireRepository;
 
 

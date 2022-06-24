@@ -18,21 +18,21 @@ public class UsagerSeeder {
     CompanySeeder companySeeder;
 
 
-
     @Autowired
     private UsagerServiceImpl usagerService;
 
-    public Usager usager1 ;
+    public Usager usager1;
     public Usager usager2;
 
     public void seed() {
 
-        if(usagerService.findAll().isEmpty()){
-            usager1 = new Usager("bassem", "jadoui", "bassem97","bassemjadoui1996@gmail.com","123456", SEXE.homme, LocalDate.of(1997,Calendar.MAY,20),roleSeeder.admin,companySeeder.company1);
-            usager2 =  new Usager("taher", "Hosseyni", "taher2022","taherhoseyni@gmail.com","123456", SEXE.homme, LocalDate.of(1997,Calendar.MAY,20),roleSeeder.client,companySeeder.company2);
+        if (usagerService.findAll().isEmpty()) {
+            usager1 = new Usager("hosseyni", "taher", "hosseyni2022", "hosseynitaher@gmail.com", "123456", SEXE.homme, LocalDate.of(1997, Calendar.MAY, 20), roleSeeder.admin, companySeeder.company1);
+            usager2 = new Usager("zarai", "mourad", "zarai2022", "zaraimourad@gmail.com", "123456", SEXE.homme, LocalDate.of(1997, Calendar.MAY, 20), roleSeeder.client, companySeeder.company2);
             usagerService.add(usager1);
             usagerService.add(usager2);
-        }
 
+
+        }
     }
 }
