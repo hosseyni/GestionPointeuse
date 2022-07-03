@@ -1,7 +1,6 @@
 package com.spring.gestionpointeuse.Service.PControleAccess;
 
 import com.spring.gestionpointeuse.Entity.PControleAccess;
-import com.spring.gestionpointeuse.Entity.PControleAccess;
 import com.spring.gestionpointeuse.Repository.PControleAccessRepository;
 import com.spring.gestionpointeuse.Service.ICrudService;
 import org.springframework.beans.factory.annotation.Autowired;

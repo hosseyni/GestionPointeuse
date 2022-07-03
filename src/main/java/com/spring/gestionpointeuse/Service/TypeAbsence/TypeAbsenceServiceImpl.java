@@ -23,7 +23,7 @@ public class TypeAbsenceServiceImpl implements ITypeAbsenceService, ICrudService
         if (typeAbsenceRepository.findById(aLong).isPresent()) {
             TypeAbsence typeAbsence1 = typeAbsenceRepository.findById(aLong).get();
             typeAbsence1.setDesignation(typeAbsence.getDesignation());
-            typeAbsence1.setCompany(typeAbsence.getCompany());
+         //   typeAbsence1.setCompany(typeAbsence.getCompany());
             typeAbsence1.setCouleur(typeAbsence.getCouleur());
             typeAbsence1.setTypeContabilisation(typeAbsence.getTypeContabilisation());
             typeAbsence1.setTraiteAbsence(typeAbsence.getTraiteAbsence());

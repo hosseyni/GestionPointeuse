@@ -21,6 +21,9 @@ public class Absence implements Serializable {
     private Date dateDebut;
     private Date dateFin;
 
+
+
+
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "idUsager")
     @JsonIgnoreProperties({"absence"})
@@ -30,4 +33,7 @@ public class Absence implements Serializable {
     @JoinColumn(name = "idTypeAbsence")
     @JsonIgnoreProperties({"absence"})
     private TypeAbsence typeAbsence;
+
+
+
 }

@@ -23,7 +23,7 @@ public class CompanyServiceImpl implements ICompanyService, ICrudService<Company
         if (companyRepository.findById(aLong).isPresent()) {
             Company company1 = companyRepository.findById(aLong).get();
             company1.setDesignation(company.getDesignation());
-            company1.setUsagers(company.getUsagers());
+          //  company1.setUsagers(company.getUsagers());
 
             return companyRepository.save(company1);
         }

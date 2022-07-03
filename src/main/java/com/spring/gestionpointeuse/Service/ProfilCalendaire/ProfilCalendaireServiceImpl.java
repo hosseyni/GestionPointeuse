@@ -1,16 +1,16 @@
 package com.spring.gestionpointeuse.Service.ProfilCalendaire;
 
-import com.spring.gestionpointeuse.Entity.Details;
 import com.spring.gestionpointeuse.Entity.ProfilCalendaire;
 import com.spring.gestionpointeuse.Repository.ProfilCalendaireRepository;
 import com.spring.gestionpointeuse.Service.ICrudService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+import org.springframework.beans.factory.annotation.Autowired;
 @Service
 public class ProfilCalendaireServiceImpl implements IProfilCalendaireService, ICrudService<ProfilCalendaire,Long> {
 
+    @Autowired
     private ProfilCalendaireRepository profilCalendaireRepository;
 
 
@@ -23,7 +23,7 @@ public class ProfilCalendaireServiceImpl implements IProfilCalendaireService, IC
     public ProfilCalendaire update(ProfilCalendaire profilCalendaire, Long id) {
         if (profilCalendaireRepository.findById(id).isPresent()) {
             ProfilCalendaire profilCalendaire1 = profilCalendaireRepository.findById(id).get();
-            profilCalendaire1.setCompany(profilCalendaire.getCompany());
+          //  profilCalendaire1.setCompany(profilCalendaire.getCompany());
             profilCalendaire1.setCouvrant(profilCalendaire.getCouvrant());
             profilCalendaire1.setDefinition(profilCalendaire.getDefinition());
             profilCalendaire1.setDesignation(profilCalendaire.getDesignation());

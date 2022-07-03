@@ -1,9 +1,7 @@
 package com.spring.gestionpointeuse.Config.seeder;
 
 
-import com.spring.gestionpointeuse.Entity.Company;
 import com.spring.gestionpointeuse.Entity.Fonction;
-import com.spring.gestionpointeuse.Repository.CompanyRepository;
 import com.spring.gestionpointeuse.Repository.FonctionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

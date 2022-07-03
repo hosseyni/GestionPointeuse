@@ -23,10 +23,10 @@ public class ProfilCalendaire implements Serializable {
     private Time enrcetee;
     private boolean usePointeuse;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+   /*@ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "idCompany")
     @JsonIgnoreProperties({"profilCalendaire"})
-    private Company company;
+    private Company company;*/
 
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "idProfilCalendaire")
@@ -41,13 +41,14 @@ public class ProfilCalendaire implements Serializable {
     private List<SalaireCalendaire> salaireCalendaires = new ArrayList<>();
 
 
-    public ProfilCalendaire(String designation, Time couvrant, Time definition, Time enrcetee, boolean usePointeuse, Company company) {
+    public ProfilCalendaire(String designation, Time couvrant, Time definition, Time enrcetee, boolean usePointeuse) {
+      //, Company company
         this.designation = designation;
         this.couvrant = couvrant;
         this.definition = definition;
         this.enrcetee = enrcetee;
         this.usePointeuse = usePointeuse;
-        this.company = company;
+      // this.company = company;
     }
 
 

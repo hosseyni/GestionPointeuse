@@ -66,15 +66,35 @@ public class Usager implements Serializable {
     @JsonIgnoreProperties({"usagers"})
     private Role role;
 
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "idCompany")
-    @JsonIgnoreProperties({"usagers"})
-    private Company company;
+    public Usager(Long idUsager, String nom, String prenom, String username, String email, String password, String proffession, String empreinte, String badge, String numero, SEXE sexe, LocalDate dateNaissance, Date dateInscrit, List<Fonctionalitie> fonctionalities, List<Evenement> evenements, List<Absence> absences, Details details, Role role) {
+        this.idUsager = idUsager;
+        this.nom = nom;
+        this.prenom = prenom;
+        this.username = username;
+        this.email = email;
+        this.password = password;
+        this.proffession = proffession;
+        this.empreinte = empreinte;
+        this.badge = badge;
+        this.numero = numero;
+        this.sexe = sexe;
+        this.dateNaissance = dateNaissance;
+        this.dateInscrit = dateInscrit;
+        this.fonctionalities = fonctionalities;
+        this.evenements = evenements;
+        this.absences = absences;
+        this.details = details;
+        this.role = role;
+    }
 
     public Usager() {
         fonctionalities = new ArrayList<>();
+
         dateInscrit = new Date();
     }
+
+
+
 
     public Usager(String nom, String prenom, String username, String email, String password, SEXE sexe, LocalDate  dateNaissance, Role role, Company company) {
         fonctionalities = new ArrayList<>();
@@ -87,6 +107,6 @@ public class Usager implements Serializable {
         this.sexe = sexe;
         this.dateNaissance = dateNaissance;
         this.role = role;
-        this.company = company;
+
     }
 }

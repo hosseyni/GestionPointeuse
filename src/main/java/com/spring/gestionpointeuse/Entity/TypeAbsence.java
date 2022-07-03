@@ -22,10 +22,11 @@ public class TypeAbsence implements Serializable {
     private TAbsence traiteAbsence;
     private TypeContabilisation typeContabilisation;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+  /*  @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "idCompany")
     @JsonIgnoreProperties({"typeAbsences"})
     private Company company;
+   */
 
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "idTypeAbsence")

@@ -3,7 +3,6 @@ package com.spring.gestionpointeuse.Service.TempsPause;
 import com.spring.gestionpointeuse.Entity.TempsPause;
 import com.spring.gestionpointeuse.Repository.TempsPauseRepository;
 import com.spring.gestionpointeuse.Service.ICrudService;
-import com.spring.gestionpointeuse.Service.TempsPause.ITempsPauseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

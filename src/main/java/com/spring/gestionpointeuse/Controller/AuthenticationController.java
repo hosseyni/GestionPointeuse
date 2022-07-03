@@ -53,7 +53,7 @@ public class AuthenticationController {
         SecurityContextHolder.getContext().setAuthentication(authentication);
         final String token;
 //        if (!isRemembered)
-            token = tokenProvider.generateToken(userDetails,1);
+        token = tokenProvider.generateToken(userDetails,1);
 //        else token = tokenProvider.generateToken(userDetails,9999);
 
         return ResponseEntity.ok(new JwtRespone(token));
